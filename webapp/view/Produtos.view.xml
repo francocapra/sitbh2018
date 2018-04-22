@@ -1,10 +1,35 @@
-<mvc:View
-	controllerName="sitbh.controller.Produtos"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	
-	<Page title="Produtos">
-		
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sitbh.controller.Produtos">
+	<Page title="Produtos" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<ObjectHeader intro="{ID}" title="{Name}"/>
+			<Table items="{Products}" id="__table0">
+				<items>
+					<ColumnListItem id="__item0">
+						<cells>
+							<ObjectIdentifier title="{ID}" text="{Name}"/>
+							<RatingIndicator value="{Rating}"/>
+							<ObjectNumber number="{Price}" unit="Reais" state="Success"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column id="__column0">
+						<header>
+							<Label text="Header 1" id="__label0"/>
+						</header>
+					</Column>
+					<Column id="__column1">
+						<header>
+							<Label text="Header 2" id="__label1"/>
+						</header>
+					</Column>
+					<Column id="__column2">
+						<header>
+							<Label text="Header 3" id="__label2"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+		</content>
 	</Page>
-
 </mvc:View>

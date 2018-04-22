@@ -65,6 +65,12 @@
 				"settings": {
 					"disableHeadRequestForToken": true
 				}
+			},
+			"secundario": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"dataSource": "JSON",
+				"preload": false
 			}
 		},
 		"routing": {
@@ -73,18 +79,27 @@
 				"viewType": "XML",
 				"viewPath": "sitbh.view",
 				"controlId": "mainContainer",
-				"controlAggregation": "pages"
+				"controlAggregation": "pages",
+				"transition": "fade"
 			},
 			"routes": [{
-				"pattern": "/Categorias",
+				"pattern": "",
 				"name": "default",
-				"target": [
-					"categorias"
-				]
+				"target": ["categorias"]
+			}, {
+				"pattern": "categoriaMarcada/{id}",
+				"name": "categoriaEscolhida",
+				"target": ["produtosDaCategoria"]
 			}],
 			"targets": {
 				"categorias": {
-					"viewName": "Categorias"
+					"viewName": "Categorias",
+					"viewLevel": 1
+				},
+				"produtosDaCategoria": {
+					"viewName": "Produtos",
+					"viewLevel": 2,
+					"transition": "flip"
 				}
 			}
 		}

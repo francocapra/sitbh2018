@@ -1,11 +1,37 @@
-<mvc:View
-	controllerName="sitbh.controller.Categorias"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	xmlns="sap.m">
-	
+<mvc:View controllerName="sitbh.controller.Categorias" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
 	<Page title="Categorias">
-		
+		<content>
+			<!--<Text text="Lista de Categorias" />-->
+			<!--<Input value="UI5" />-->
+			<!--<Input value="{view>/categorias/nomes/1/nome}"  />-->
+			<!--<Input value="{/Categories(2)/Name}"  />-->
+			<!--<ComboBox id="comboCategorias" items="{view>/categorias/nomes}"  >-->
+			<!--	<items>-->
+					<!--<core:Item key="1" text="Test1"></core:Item>-->
+					<!--<core:Item key="2" text="Test2"></core:Item>-->
+					<!--<core:Item key="1" text="{}"/>-->
+			<!--		<core:Item key="1" text="{view>nome}"/>-->
+			<!--	</items>-->
+			<!--</ComboBox>-->
+			<List 
+				noDataText="no data text" 
+				items="{/Categories}" 
+				mode="SingleSelectMaster" 
+				itemPress="onCategoriaSelected"
+			>
+				<items>
+					<StandardListItem 
+						title="{Name}"
+						type="Navigation"
+						description="{ID}"
+					/>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button text="clique aqui" press="onPress"/>
+			</Toolbar>
+		</footer>
 	</Page>
-	
 </mvc:View>

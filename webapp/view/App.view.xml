@@ -1,9 +1,13 @@
-<mvc:View
-	controllerName="sitbh.controller.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true"
-	xmlns="sap.m">
-	
-	<App id="mainContainer" />
-	
+<mvc:View 
+	controllerName="sitbh.controller.App" 
+	displayBlock="true" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+>
+	<App id="mainContainer">
+		<pages>
+			
+		</pages>
+	</App>
 </mvc:View>
